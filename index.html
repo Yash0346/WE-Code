@@ -213,7 +213,8 @@ function plotLocation(latitude, longitude) {
     
 
 function getAstronautslocation(){
-    const url = "http://api.open-notify.org/astros.json";
+    // const url = "http://api.open-notify.org/astros.json";
+     const url = 'https://corsproxy.io/?' + encodeURIComponent('http://api.open-notify.org/astros.json');
     var result = fetch(url)
         .then(response => response.json())
         .then((data) => {
